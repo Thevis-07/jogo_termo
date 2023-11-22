@@ -14,8 +14,8 @@ class comand_line_colors:
     RESET = '\033[0m'
 
     @staticmethod
-    def colour(texto, cor):
-        return cor + texto + comand_line_colors.RESET
+    def colour(text, color):
+        return color + text + comand_line_colors.RESET
 
 def clean_and_back():# mova o cursor para o incio da ultima linha
     
