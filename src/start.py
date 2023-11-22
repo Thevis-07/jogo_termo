@@ -1,6 +1,7 @@
 import service
 import utilities
 import show_command_line as menus
+from utilities import comand_line_colors as colors
 
 def start (list_of_words):
     while True:
@@ -36,14 +37,16 @@ def start (list_of_words):
 
     return False
 
-
 def start_round(secret_word):
     
     list_type_words = []
 
-    for _ in range(5):
-            
+    for x in range(5):
+        attempt = 5 - x
         while True:
+            print(colors.colour(f"Você tem {attempt} tentativas.", colors.BLUE))
+            utilities.time_sleep(1)
+            utilities.clean_and_back()
             word = service.input_guess("Digite seu palpite: ")
 
             if word in list_type_words:
@@ -54,7 +57,6 @@ def start_round(secret_word):
             break
 
         result, letters = service.check_word(word, secret_word)
-
         if result == True:
             print(f"\t {letters[0]}|{letters[1]}|{letters[2]}|{letters[3]}|{letters[4]}")
             print("\t \033[38;5;206m🎉Parabéns você acertou a palavra!!🎉\n \033[0m")

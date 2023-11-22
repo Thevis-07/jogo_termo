@@ -37,11 +37,13 @@ def check_word(guess, secret_word):
 
 def get_secret_word(list_of_words): #Remova espaços em branco e quebras de linha de cada palavra
 
-    list_of_words = [word.strip() for word in list_of_words]
+    for i in range(len(list_of_words)):
+        list_of_words[i] = list_of_words[i].strip()
+
     
     secret_word = random.choice(list_of_words).strip() # gera uma palavra aleatória e guarda na secret word
      
-    return secret_word
+    return secret_word.upper()
  
 
 def validation_used_words (list_of_type_words, type_word): # função para adicionar a secret word no arquivo
@@ -54,7 +56,7 @@ def validation_used_words (list_of_type_words, type_word): # função para adici
 
 def add_word_in_file (word): 
 
-    file = open('used_words.txt', 'a')
+    file = open('src/used_words.txt', 'a')
     
     file.write(str(f'{word}\n'))
 
@@ -64,7 +66,7 @@ def add_word_in_file (word):
 
 def word_exists_used_words(word): # verifica se uma determinada palavra existe no arquivo used words
     
-    file = open('used_words.txt', 'r') 
+    file = open('src/used_words.txt', 'r') 
     if word in file: # verifica se a palavra está no arquivo
         file.close()
         return True
@@ -73,12 +75,12 @@ def word_exists_used_words(word): # verifica se uma determinada palavra existe n
 
 def clean_file_historic (): # função pra limpar o used words
   
-    file = open('used_words.txt', 'w')
+    file = open('src/used_words.txt', 'w')
 
     file.close ()
 
 def show_words_drawn():
-    file = open ("used_words.txt", "r")
+    file = open ("src/used_words.txt", "r")
     
     print(utilities.comand_line_colors.colour("\t As palavras sorteadas são: ", utilities.comand_line_colors.MAGENTA))
     counter = 0
