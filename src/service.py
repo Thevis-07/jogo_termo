@@ -56,7 +56,7 @@ def validation_used_words (list_of_type_words, type_word): # função para adici
 
 def add_word_in_file (word): 
 
-    file = open('src/used_words.txt', 'a')
+    file = open('used_words.txt', 'a')
     
     file.write(str(f'{word}\n'))
 
@@ -66,7 +66,7 @@ def add_word_in_file (word):
 
 def word_exists_used_words(word): # verifica se uma determinada palavra existe no arquivo used words
     
-    file = open('src/used_words.txt', 'r') 
+    file = open('used_words.txt', 'r') 
     if word in file: # verifica se a palavra está no arquivo
         file.close()
         return True
@@ -75,12 +75,12 @@ def word_exists_used_words(word): # verifica se uma determinada palavra existe n
 
 def clean_file_historic (): # função pra limpar o used words
   
-    file = open('src/used_words.txt', 'w')
+    file = open('used_words.txt', 'w')
 
     file.close ()
 
 def show_words_drawn():
-    file = open ("src/used_words.txt", "r")
+    file = open ("used_words.txt", "r")
     
     print(utilities.comand_line_colors.colour("\t As palavras sorteadas são: ", utilities.comand_line_colors.MAGENTA))
     counter = 0

@@ -2,7 +2,7 @@ import start
 import service
 
 def main ():
-    file = open ("src/list_of_words.txt", "r")
+    file = open ("list_of_words.txt", "r")
     # abre o arquivo chamado list of words
 
     line = file.readline()

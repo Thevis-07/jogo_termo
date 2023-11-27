@@ -17,8 +17,8 @@ class comand_line_colors:
     def colour(text, color):
         return color + text + comand_line_colors.RESET
 
-def clean_and_back():# mova o cursor para o incio da ultima linha
-    
+def clean_and_back():
+    # mova o cursor para o incio da ultima linha
     sys.stdout.write('\x1b[1A')
     # Apague a última linha
     sys.stdout.write('\x1b[2K')
@@ -29,11 +29,11 @@ def validate_number_letters_and_letters(message, number_letters):
             
             word = input (message)
 
-            if not validation_string(word):
+            if not word.isalpha():
                 laps += 1
-                print("Digite apenas palavras válidas")
+                print("Digite apenas palavras válidas, sem números ou espaços.")
                 time_sleep(2)
-                while laps < 0:
+                for _ in range(2):
                     clean_and_back()
                 continue
 
@@ -41,15 +41,12 @@ def validate_number_letters_and_letters(message, number_letters):
                 laps += 1
                 print("A palavra deve ter 5 letras.")
                 time_sleep(2)
-                while laps < 0:
+                for _ in range(2):
                     clean_and_back()
                 continue
-                
-            if verifiy_space (word):
-                 print ("A palavra não deve ter espaço.")
-                 continue
             
             break
+
     return word
 
 def validated_sim_nao (message):
@@ -79,18 +76,6 @@ def clear():
       Função para limpar o terminal
       """
       os.system("cls")
-
-def validation_string (string):
-    for i in range (len(string)):
-          
-        try:
-            num = int (string[i])           
-            return False
-               
-        except ValueError:           
-            continue
-          
-    return True   
                
 def time_sleep(value):
      """
@@ -98,10 +83,6 @@ def time_sleep(value):
      :param value: 
      """
      time.sleep(value)
-
-def verifiy_space (string):
-     
-     return len(string.split()) > 1
 
 def valided_input_int(message):
     """
@@ -120,6 +101,8 @@ def valided_input_int(message):
              except ValueError: 
                 print("Opção inválida, tente novamente...") 
                 time_sleep(1) 
+                for _ in range(2):
+                    clean_and_back()
                 continue 
              break
     return int(value)
