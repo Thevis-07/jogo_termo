@@ -23,8 +23,9 @@ Principais funcionalidades:
 - Sorteio de palavras aleatórias
 - Histórico com as palavras já sorteadas
 - Validações para palavras "inválidas"
-- Limpar histórico de palavras
-- Cores para indentificar a palavra sorteada
+- Reset no histórico de palavras
+- Geração de feedback com cores para indentificar a palavra sorteada
+- Menu "amigavel" para o usuario
 
 <h3>
   Como iniciar o sistema:
@@ -45,7 +46,7 @@ Letras em amarelo: estão na posição errada
 Letras brancas: não há essa letra na palavra
 Regras:
 A palavra deve conter obrigatoriamente 5 letras.
-Não são permitdos nomes próprios, números, espaço entre as palavras ou palavras com acentos.
+Não são permitdos números, espaço entre as palavras ou palavras com acentos.
 
 <h3>
     Tecnologias utilizadas:
@@ -64,9 +65,7 @@ Não são permitdos nomes próprios, números, espaço entre as palavras ou pala
 Maria Edurada
 
 [![linkdin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-eduarda-mello-a218b4268/)
-[![Whatsapp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/+5555992185151)
 
 Thevis Cardoso
 
 [![linkdin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thevis-cardoso)
-[![Whatsapp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/+5555996351078)
