@@ -30,7 +30,7 @@ Principais funcionalidades:
   Como iniciar o sistema:
 </h3>  
 
-Para começar você pode abrir o diretório do projeto no terminal e rodar o comando 
+Para começar você pode abrir o diretório do projeto no terminal e na ```/src``` rodar o comando 
 ```ssh
 python main.py
 ```
